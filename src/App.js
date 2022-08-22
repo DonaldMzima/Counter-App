@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"; //1st step(how to import react)1 object{useState} in our import statement.//we haVE a capability to useStates in our function component.
+import ".//App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const reset = () => {
+    setCount(0);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <h1>My counter App</h1>
+      <div className="times"></div>
+      <p> {count} </p>
+
+      <div className="add">
+        <button onClick={() => setCount(count + 2)}>+ add my app</button>
+
+        <div className="reset">
+          <button onClick={() => setCount(reset)}> reset my app</button>
+        </div>
+
+        <button onClick={() => setCount(count - 2)}>- sub my app</button>
+      </div>
     </div>
   );
 }
