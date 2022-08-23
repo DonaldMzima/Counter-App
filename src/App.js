@@ -13,15 +13,14 @@ function App() {
       <div className="times"></div>
       <p> {count} </p>
 
-      <div className="add">
-        <button onClick={() => setCount(count + 2)}>+ add my app</button>
-
-        <div className="reset">
-          <button onClick={() => setCount(reset)}> reset my app</button>
+      <div >
+        <button  onClick={() => setCount(count + 2)}>+ </button>
+        <button  onClick={() => setCount(count - 2)}>- </button>
+      </div>
+      <div className="reset">
+          <button   onClick={() => setCount(reset)}> reset </button>
         </div>
 
-        <button onClick={() => setCount(count - 2)}>- sub my app</button>
-      </div>
     </div>
   );
 }
