@@ -1,18 +1,29 @@
-.body {
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   background-color: rgb(2, 0, 36);
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
   text-align: center;
   color: rgb(90, 242, 253);
   font-size: 40px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 10px hsl(130, 91%, 65%); /* Add the shadow here */
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 button {
@@ -22,13 +33,7 @@ button {
   width: 100px;
   font-size: 30px;
   background-color: blueviolet;
-
-  background-color: rgb(2, 0, 36);
-  padding: 20px;
-  display: flex;
-
-  /* Center horizontally */
-  justify-content: center;
+  margin: 0 10px;
 }
 
 button:hover {
@@ -46,7 +51,5 @@ p {
 
 .reset {
   text-align: center;
-  margin-top: -107px;
-  /* margin-bottom: 250px; */
-  margin-left: 100px;
+  margin-top: 20px;
 }
